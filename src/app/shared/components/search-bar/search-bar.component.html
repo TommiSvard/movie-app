@@ -1,11 +1,17 @@
-<div class="search-container">
+<form
+  [formGroup]="searchbarForm"
+  (ngSubmit)="onSubmit()"
+  class="search-container"
+>
   <input
     type="text"
+    autofocus
     name="searchbar-input"
     id="searchbar-input"
     class="searchbar-input"
+    formControlName="searchbar"
   />
   <button class="searchbar-button">
     <i class="searchbar-icon material-icons">search</i>
   </button>
-</div>
+</form>
