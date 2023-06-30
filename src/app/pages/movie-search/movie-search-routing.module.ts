@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MovieSearchComponent } from './movie-search.component';
 
 const routes: Routes = [
-  { path: '', component: MovieSearchComponent},
+  { path: '', component: MovieSearchComponent, data: {animationState: 'One'}},
 ];
 
 @NgModule({
