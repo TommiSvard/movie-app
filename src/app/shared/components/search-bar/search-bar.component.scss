@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+input,
+button {
+  border: none;
+  background: none;
+  outline: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.search-container {
+  --height: 4em;
+  display: flex;
+  border-radius: var(--height);
+  background-color: white;
+  height: var(--height);
+}
+
+.search-container .searchbar-input {
+  width: 40vw;
+  padding-left: 2em;
+}
+
+.searchbar-input {
+  font-size: 2em;
+}
+
+.searchbar-button {
+  display: flex;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  background-color: black;
+}
+
+.searchbar-icon {
+  margin: auto;
+  color: #fff;
+}
