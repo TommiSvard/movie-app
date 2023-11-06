@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MovieService } from 'src/app/core/services/movie.service';
 
 @Component({
   selector: 'app-movie-search',
@@ -6,8 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./movie-search.component.scss']
 })
 export class MovieSearchComponent {
-  constructor() { }
+  public movies: any[] = [];
+  constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
+    this.movieService.getAllMovies().subscribe((data) => {
+      console.log(data);
+    });
+  }
+
+  onSearch(term: any): void {
+          this.movieService.searchMovieByTerm(term).subscribe((data) => {
+        this.movies = data;
+      });
   }
 }

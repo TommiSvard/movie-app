@@ -11,8 +11,9 @@ import { routeTransitionAnimations } from './shared/animations/route-transition-
 export class AppComponent {
   title = 'movie-app';
 
+  constructor() { }
+
   prepareRoute(outlet: RouterOutlet) {
-    console.log(outlet.activatedRouteData['animationState'])
   return outlet && 
     outlet.activatedRouteData && 
     outlet.activatedRouteData['animationState'];

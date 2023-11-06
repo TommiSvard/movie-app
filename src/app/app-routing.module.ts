@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: 'movie-search', loadChildren: () => import('./pages/movie-search/movie-search.module').then(m => m.MovieSearchModule) },
   { path: 'actor', loadChildren: () => import('./pages/actor/actor.module').then(m => m.ActorModule) },
+  { path: '', redirectTo: 'movie-search', pathMatch: 'full' },
+  { path: '**', redirectTo: 'movie-search' }
 ];
 
 @NgModule({

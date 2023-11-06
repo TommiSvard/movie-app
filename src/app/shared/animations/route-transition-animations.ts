@@ -7,7 +7,7 @@ export const routeTransitionAnimations = trigger('pageTransition', [
       position: 'inherit',
       top: '50vh',
       left: 0,
-      height: '100vh'
+      height: '100vh',
     })
   ]),
   query(':enter', [style({ top: '100vh' })]),
@@ -25,7 +25,7 @@ export const routeTransitionAnimations = trigger('pageTransition', [
       position: 'inherit',
       top: '50vh',
       left: 0,
-      height: '100vh'
+      height: '100vh',
     })
   ]),
   query(':enter', [style({ top: '-100vh' })]),
